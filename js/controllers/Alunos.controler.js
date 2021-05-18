@@ -1,16 +1,18 @@
-class AlunosController{
-    constructor(service,view){
+import { AlunoModel } from "./../Model/Aluno.model.js"
+
+export class AlunosController {
+    constructor(service, view) {
         view.mostraaluno(service.alunos)
         this.view = view
         this.service = service
     }
 
-    add(aluno){
+    add(aluno) {
         this.service.add(new AlunoModel(aluno))
         this.view.mostraaluno(this.service.alunos)
     }
 
-    busca(name){
+    busca(name) {
         const dados = this.service.busca(name)
         this.view.mostraaluno(dados)
     }

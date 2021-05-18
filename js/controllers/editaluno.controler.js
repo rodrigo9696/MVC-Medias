@@ -1,4 +1,4 @@
-class EditAlunoContorller {
+export class EditAlunoContorller {
     constructor(model, view, service) {
         this.model = model
         this.view = view

@@ -1,4 +1,6 @@
-class EditAluniView {
+
+
+export class EditAluniView {
     constructor(form, materias) {
         this.form = form
         this.container = this.form.querySelector("[data-edit-notas]")

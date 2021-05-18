@@ -1,4 +1,6 @@
-class AlunosService{
+import {AlunoModel} from "./../Model/Aluno.model.js"
+
+export class AlunosService{
     constructor(){
         this.alunos = []
         this.updatelistalocalstorage()

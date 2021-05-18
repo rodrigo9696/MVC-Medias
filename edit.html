@@ -85,40 +85,15 @@
 
   </div>
 
-  <script src="js/calc.js"></script>
+  <!-- <script src="js/calc.js"></script>
   <script src="js/model/Aluno.model.js"></script>
   <script src="js/Services/Alunos.service.js"></script>
   <script src="js/Services/materias.service.js"></script>
 
   <script src="js/views/editaluno.view.js"></script>
-  <script src="js/controllers/editaluno.controler.js"></script>
+  <script src="js/controllers/editaluno.controler.js"></script> -->
+  <script src="js/edit.js" type="module"></script>
 
-
-  <script>
-
-    const alunosService = new AlunosService()
-
-    const paramString = window.location.search
-    const pransURL = new URLSearchParams(paramString)
-    const id = parseInt(pransURL.get("id"))
-
-    const aluno = alunosService.searchAlunoId(id)
-
-    document.getElementById("first_name").value = aluno.nome
-
-    const editAlunoView = new EditAluniView(document.querySelector("[data-edit-aluno-form]"), new MateriasService().materias)
-
-    const editaluno= new EditAlunoContorller(aluno, editAlunoView, alunosService)
-
-    document.querySelector("form").addEventListener("submit", function(e){
-      e.preventDefault()
-      const nome = document.querySelector("#first_name").value
-
-      editaluno.edit(aluno, nome)
-      window.location.assign("index.html")
-    })
-
-  </script>
 </body>
 
 </html>
